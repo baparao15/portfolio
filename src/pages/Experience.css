@@ -1,0 +1,84 @@
+.experience-title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 40px;
+}
+
+.experience-title em {
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 12px;
+  bottom: 12px;
+  width: 1px;
+  background: var(--line);
+}
+
+.timeline-card {
+  position: relative;
+  background: var(--card-soft);
+  border-radius: var(--radius);
+  padding: 28px 28px 28px 52px;
+}
+
+.timeline-card::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 32px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--card);
+  border: 2px solid var(--ink-soft);
+}
+
+.timeline-period {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 8px;
+}
+
+.timeline-card h3 {
+  font-size: 20px;
+}
+
+.timeline-place {
+  display: block;
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin: 4px 0 12px;
+}
+
+.timeline-card p {
+  font-size: 14px;
+}
+
+@media (max-width: 700px) {
+  .experience-title {
+    font-size: 30px;
+  }
+
+  .timeline-card {
+    padding: 22px 20px 22px 44px;
+  }
+}

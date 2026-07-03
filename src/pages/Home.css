@@ -1,0 +1,266 @@
+.card {
+  background: var(--card-soft);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+
+.bento {
+  display: grid;
+  grid-template-columns: 1.5fr 1.55fr;
+  grid-template-rows: auto auto 202px;
+  gap: 20px;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.headline {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  background: var(--card);
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 368px;
+  padding-top: 52px;
+  padding-bottom: 46px;
+  animation: slideInRight 0.7s ease-out both;
+}
+
+.headline .deco {
+  position: absolute;
+  top: 30px;
+  right: 34px;
+  width: 36px;
+  height: 36px;
+  color: var(--ink);
+}
+
+.headline h1 {
+  font-size: 34px;
+  line-height: 1.22;
+  letter-spacing: -0.4px;
+}
+
+.headline h1 em {
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+.photo {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  min-height: 100%;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  animation: slideInRight 0.7s 0.1s ease-out both;
+}
+
+.photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.accred {
+  background: var(--card);
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.label em {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.accred p {
+  font-size: 13px;
+  flex: 1;
+}
+
+.accred-socials a {
+  width: 36px;
+  height: 36px;
+}
+
+.accred-socials svg {
+  width: 16px;
+  height: 16px;
+}
+
+.row3 {
+  grid-column: 1 / 3;
+  grid-row: 3;
+  display: grid;
+  grid-template-columns: 1.1fr 0.85fr 1fr;
+  gap: 24px;
+}
+
+.row3 .card {
+  padding: 32px 23px;
+}
+
+.intro {
+  background: var(--card);
+  display: flex;
+  align-items: center;
+}
+
+.intro p {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.contact {
+  background: var(--card);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.contact-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--card-soft);
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.contact-top:hover {
+  background: var(--white);
+}
+
+.arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--white);
+  font-size: 12px;
+}
+
+.contact-cta {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.stat-strip {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 32px 44px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.stats-list {
+  display: flex;
+  gap: 56px;
+  margin: 0;
+}
+
+.stats-list dt {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.stats-list dd {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+.resume-btn {
+  padding: 12px 26px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .bento {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .headline {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    min-height: 280px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .row3 .card {
+    padding: 24px 22px;
+  }
+
+  .photo {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    min-height: 260px;
+  }
+
+  .row3 {
+    grid-column: 1 / 3;
+    grid-row: 4;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .headline h1 {
+    font-size: 30px;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .stat-strip {
+    padding: 26px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stats-list {
+    gap: 32px;
+  }
+}

@@ -1,0 +1,174 @@
+:root {
+  --canvas: #000000;
+  --bg: #0d0d0d;
+  --card-soft: #161616;
+  --card: #1e1e1e;
+  --card-dark: #2e2e2e;
+  --ink: #f2f2f2;
+  --ink-soft: #a3a3a3;
+  --line: rgba(255, 255, 255, 0.12);
+  --white: #0a0a0a;
+
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 24px;
+}
+
+.site-frame {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  box-shadow: 0 30px 70px -20px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+@media (max-width: 700px) {
+  #root {
+    padding: 16px 12px;
+  }
+
+  .site-frame {
+    border-radius: 20px;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  margin: 0;
+  color: var(--ink);
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 64px 0;
+  scroll-margin-top: 32px;
+}
+
+.section:first-child {
+  padding-top: 28px;
+}
+
+.section:last-child {
+  padding-bottom: 56px;
+}
+
+.section + .section {
+  border-top: 1px solid var(--line);
+}
+
+/* reusable placeholder block for images the user will add later */
+.placeholder {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--card-soft),
+    var(--card-soft) 10px,
+    var(--card) 10px,
+    var(--card) 20px
+  );
+  border: 1px dashed var(--ink-soft);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-soft);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  min-height: 160px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--ink);
+  color: var(--white);
+  border: none;
+  border-radius: 999px;
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}

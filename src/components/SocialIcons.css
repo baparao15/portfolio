@@ -1,0 +1,25 @@
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--card-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  transition: background 0.15s ease;
+}
+
+.social-icons a:hover {
+  background: var(--card-dark);
+}
+
+.social-icons svg {
+  width: 16px;
+  height: 16px;
+}
