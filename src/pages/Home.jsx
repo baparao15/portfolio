@@ -1,5 +1,25 @@
 import profilePhoto from '../assets/profile.jpg'
+import Marquee from '../components/Marquee'
+import { useCountUp } from '../hooks/useCountUp'
 import './Home.css'
+
+const strengths = [
+  'MERN Stack',
+  'Machine Learning',
+  'NLP',
+  'Full-Stack Development',
+  'Problem Solving',
+]
+
+function Stat({ value, label }) {
+  const [ref, display] = useCountUp(value)
+  return (
+    <div ref={ref}>
+      <dt>{display}</dt>
+      <dd>{label}</dd>
+    </div>
+  )
+}
 
 function Home() {
   return (
@@ -78,18 +98,9 @@ function Home() {
 
         <div className="stat-strip">
           <dl className="stats-list">
-            <div>
-              <dt>25+</dt>
-              <dd>Public repos</dd>
-            </div>
-            <div>
-              <dt>5</dt>
-              <dd>Certifications</dd>
-            </div>
-            <div>
-              <dt>2027</dt>
-              <dd>B.Tech CSE</dd>
-            </div>
+            <Stat value="25+" label="Public repos" />
+            <Stat value="5" label="Certifications" />
+            <Stat value="2027" label="B.Tech CSE" />
           </dl>
           <a
             href="/documents/resume.pdf"
@@ -100,6 +111,8 @@ function Home() {
             View Resume
           </a>
         </div>
+
+        <Marquee items={strengths} />
       </div>
     </section>
   )

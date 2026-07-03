@@ -1,3 +1,4 @@
+import Reveal from "../components/Reveal";
 import "./Certifications.css";
 
 const certifications = [
@@ -31,26 +32,27 @@ const certifications = [
 function Certifications() {
   return (
     <section id="certifications" className="section certifications-section">
-      <div className="container">
+      <Reveal className="container">
         <h1 className="certifications-title">
           <em>Credentials</em> & Wins
         </h1>
 
         <div className="cert-grid">
-          {certifications.map((cert) => (
+          {certifications.map((cert, i) => (
             <a
-              className="cert-card"
+              className="cert-card stagger-item"
               key={cert.title}
               href={`/documents/certificates/${cert.file}`}
               target="_blank"
               rel="noreferrer"
+              style={{ '--i': i }}
             >
               <strong>{cert.title}</strong>
               <span>{cert.summary}</span>
             </a>
           ))}
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

@@ -1,5 +1,6 @@
-import "./About.css";
+import Reveal from "../components/Reveal";
 import profilePhoto from "../assets/profile.jpg";
+import "./About.css";
 
 const skills = [
   "JavaScript",
@@ -23,7 +24,7 @@ const skills = [
 function About() {
   return (
     <section id="about" className="section about-section">
-      <div className="container">
+      <Reveal className="container">
         <h1 className="about-title">
           About <em>Me</em>
         </h1>
@@ -61,14 +62,18 @@ function About() {
             <em>Skills</em>
           </span>
           <div className="skill-pills">
-            {skills.map((skill) => (
-              <span className="skill-pill" key={skill}>
+            {skills.map((skill, i) => (
+              <span
+                className="skill-pill stagger-item"
+                key={skill}
+                style={{ '--i': i }}
+              >
                 {skill}
               </span>
             ))}
           </div>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

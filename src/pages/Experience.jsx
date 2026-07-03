@@ -1,3 +1,4 @@
+import Reveal from "../components/Reveal";
 import "./Experience.css";
 
 const timeline = [
@@ -7,6 +8,13 @@ const timeline = [
     place: "SRM University, Andhra Pradesh",
     summary:
       "Coursework in Data Structures, DBMS, Operating Systems, OOP, and Machine Learning.",
+  },
+  {
+    period: "May 2026 – Jul 2026",
+    title: "Software Development Intern",
+    place: "Genset AI Solutions",
+    summary:
+      "Built a full-stack Smart Community Management System with Node.js, Express, MongoDB, and React — 90+ REST APIs secured with JWT auth, RBAC, and bcrypt hashing, validated by 90+ automated tests.",
   },
   {
     period: "Research Internship",
@@ -20,14 +28,18 @@ const timeline = [
 function Experience() {
   return (
     <section id="experience" className="section experience-section">
-      <div className="container">
+      <Reveal className="container">
         <h1 className="experience-title">
           Experience & <em>Education</em>
         </h1>
 
         <div className="timeline">
-          {timeline.map((item) => (
-            <article className="timeline-card" key={item.title}>
+          {timeline.map((item, i) => (
+            <article
+              className="timeline-card stagger-item"
+              key={item.title}
+              style={{ '--i': i }}
+            >
               <span className="timeline-period">{item.period}</span>
               <h3>{item.title}</h3>
               <span className="timeline-place">{item.place}</span>
@@ -35,7 +47,7 @@ function Experience() {
             </article>
           ))}
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

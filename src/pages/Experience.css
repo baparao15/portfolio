@@ -33,6 +33,13 @@
   background: var(--card-soft);
   border-radius: var(--radius);
   padding: 28px 28px 28px 52px;
+  transition: opacity 0.5s ease, transform 0.5s ease, background 0.2s ease, box-shadow 0.2s ease;
+  transition-delay: calc(var(--i, 0) * 70ms), calc(var(--i, 0) * 70ms), 0s, 0s;
+}
+
+.timeline-card:hover {
+  background: var(--card);
+  box-shadow: 0 14px 32px -16px rgba(0, 0, 0, 0.5);
 }
 
 .timeline-card::before {

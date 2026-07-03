@@ -1,3 +1,4 @@
+import Reveal from "../components/Reveal";
 import "./Projects.css";
 
 const projects = [
@@ -16,7 +17,6 @@ const projects = [
     description:
       "A government service platform that enables digital application submission and real-time tracking with secure JWT authentication, role-based access control, and a normalized database for efficient data management.",
     repo: "https://github.com/baparao15/SevaPortal",
-    live: "https://seva-portal-ashy.vercel.app",
   },
   {
     id: 3,
@@ -73,7 +73,7 @@ const projects = [
 function Projects() {
   return (
     <section id="projects" className="section projects-section">
-      <div className="container">
+      <Reveal className="container">
         <div className="projects-heading">
           <h1 className="projects-title">
             <em>Projects</em>
@@ -89,8 +89,12 @@ function Projects() {
         </div>
 
         <div className="projects-list">
-          {projects.map((project) => (
-            <article className="project-card" key={project.id}>
+          {projects.map((project, i) => (
+            <article
+              className="project-card stagger-item"
+              key={project.id}
+              style={{ '--i': i }}
+            >
               <span className="project-tag">{project.tag}</span>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
@@ -107,7 +111,7 @@ function Projects() {
             </article>
           ))}
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

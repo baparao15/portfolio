@@ -75,6 +75,12 @@
   font-weight: 500;
   padding: 8px 16px;
   border-radius: 999px;
+  transition: opacity 0.5s ease, transform 0.5s ease, background 0.2s ease;
+  transition-delay: calc(var(--i, 0) * 70ms), calc(var(--i, 0) * 70ms), 0s;
+}
+
+.skill-pill:hover {
+  background: var(--card-dark);
 }
 
 @media (max-width: 800px) {

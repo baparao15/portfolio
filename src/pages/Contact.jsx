@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Reveal from '../components/Reveal'
 import SocialIcons from '../components/SocialIcons'
 import './Contact.css'
 
@@ -56,7 +57,7 @@ function Contact() {
 
   return (
     <section id="contact" className="section contact-section">
-      <div className="container contact-grid">
+      <Reveal className="container contact-grid">
         <div className="contact-intro">
           <h1>
             Let's <em>Talk</em>
@@ -103,7 +104,7 @@ function Contact() {
             {buttonLabel}
           </button>
         </form>
-      </div>
+      </Reveal>
     </section>
   )
 }
