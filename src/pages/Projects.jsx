@@ -4,6 +4,33 @@ import "./Projects.css";
 const projects = [
   {
     id: 1,
+    title: "Cortex",
+    tag: "GraphRAG · AI Copilot · TypeScript",
+    description:
+      "A GraphRAG copilot for industrial operations that unifies fragmented plant knowledge and answers strictly from your own documents, with sources and confidence scores attached to every response.",
+    repo: "https://github.com/baparao15/cortex",
+    live: "https://cortex.baparao2005.workers.dev/",
+  },
+  {
+    id: 2,
+    title: "SocietySphere",
+    tag: "MERN · Community Management",
+    description:
+      "A smart society/community management system for residents, admins, guards, and maintenance staff — visitor access, complaints, facility bookings, announcements, invoices, receipts, and payment-ready billing flows.",
+    repo: "https://github.com/baparao15/gated-community",
+    live: "https://gated-community.baparao2005.workers.dev/",
+  },
+  {
+    id: 3,
+    title: "Fair Split",
+    tag: "LLM · Vision · Node.js",
+    description:
+      "Upload a receipt photo and describe who had what — an LLM extracts the itemized bill and assignments, then every rupee is computed and reconciled in plain JavaScript, never left to the model.",
+    repo: "https://github.com/baparao15/EpiFi",
+    live: "https://epifi-frontend.baparao2005.workers.dev/",
+  },
+  {
+    id: 4,
     title: "BeverageStore",
     tag: "MERN · Multi-vendor e-commerce",
     description:
@@ -11,7 +38,7 @@ const projects = [
     repo: "https://github.com/baparao15/E-Commerce",
   },
   {
-    id: 2,
+    id: 5,
     title: "Seva Portal",
     tag: "TypeScript · Government platform",
     description:
@@ -19,7 +46,7 @@ const projects = [
     repo: "https://github.com/baparao15/SevaPortal",
   },
   {
-    id: 3,
+    id: 6,
     title: "SyncStream",
     tag: "C++ · Systems programming",
     description:
@@ -27,7 +54,7 @@ const projects = [
     repo: "https://github.com/baparao15/FOLDER-SYNC",
   },
   {
-    id: 4,
+    id: 7,
     title: "TrainVision",
     tag: "AI · Full-stack · SIH Hackathon",
     description:
@@ -36,7 +63,7 @@ const projects = [
     live: "https://trainvision.vercel.app",
   },
   {
-    id: 5,
+    id: 8,
     title: "SmartStreet AI",
     tag: "AI · Full-stack · Fintech",
     description:
@@ -44,7 +71,7 @@ const projects = [
     repo: "https://github.com/baparao15/SmartStreetAI",
   },
   {
-    id: 6,
+    id: 9,
     title: "Krid.AI",
     tag: "LangGraph agent · Automation",
     description:
@@ -53,15 +80,7 @@ const projects = [
     live: "https://kridai-production-a598.up.railway.app",
   },
   {
-    id: 7,
-    title: "Fair Split",
-    tag: "LLM · Vision · Node.js",
-    description:
-      "Upload a receipt photo and describe who had what — an LLM extracts the itemized bill and assignments, then every rupee is computed and reconciled in plain JavaScript, never left to the model.",
-    repo: "https://github.com/baparao15/EpiFi",
-  },
-  {
-    id: 8,
+    id: 10,
     title: "Maritime Incident Classification",
     tag: "ML · NLP · Flask",
     description:
